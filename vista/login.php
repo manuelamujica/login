@@ -58,9 +58,9 @@
                                         </button>
                                     </form>
                                     <hr>
-                                    <div class="text-center">
+                                    <!--<div class="text-center">
                                         <a class="small" href="register.php">¿No tienes una cuenta? click aquí!</a>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
