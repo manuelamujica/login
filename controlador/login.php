@@ -40,10 +40,15 @@ if(isset($_POST["ingresar"])){
 					$_SESSION["invitado"] = 1;
 				}
 			}
-			require_once 'vista/inicio.php';
-			}
+				
+				require_once 'vista/inicio.php';
+		}else {
+			require_once 'vista/login.php';
+		}
+>>>>>>> main
 			
 		} else {
+
 			require_once 'vista/login.php';
 		}
 	} else {
