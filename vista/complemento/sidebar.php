@@ -25,12 +25,12 @@
             <span>Productos</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="ventas.php">
+        <a class="nav-link" href="?pagina=ventas">
         <i class="fas fa-shopping-cart"></i>
             <span>Ventas</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="clientes.php">
+        <a class="nav-link" href="?pagina=clientes">
         <i class="far fa-id-badge"></i>
             <span>Clientes</span></a>
     </li>

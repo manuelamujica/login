@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +13,13 @@
     <title>Inicio de sesión</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vista/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vista/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -36,31 +37,43 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block">
-                                <img src="img/web.jpg" alt="Imagen de login" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="vista/img/web.jpg" alt="Imagen de login" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">¡Bienvenido!</h1>
                                     </div>
-                                    <form class="user" action="#" method="post">
+                                    <form class="user" action="?pagina=login" method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="user" aria-describedby="emailHelp"
+                                                id="user" name="loginUser" aria-describedby="emailHelp"
                                                 placeholder="Ingresa el usuario...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="pass" placeholder="Ingresa la contraseña...">
+                                                id="pass" name="loginPass" placeholder="Ingresa la contraseña...">
                                         </div>
-                                        <button href="inicio.php" class="btn btn-primary btn-user btn-block">
+                                        <button class="btn btn-primary btn-user btn-block" type="submit" name="ingresar">
                                             Iniciar sesión
                                         </button>
                                     </form>
                                     <hr>
-                                    <!--<div class="text-center">
-                                        <a class="small" href="register.php">¿No tienes una cuenta? click aquí!</a>
-                                    </div>-->
+
+<!--<?php #if (isset($ingresar)): ?>
+    <script>
+        Swal.fire({
+            title: '<?php #echo $ingresar["title"]; ?>',
+            text: '<?php #echo $ingresar["message"]; ?>',
+            icon: '<?php #echo $ingresar["icon"]; ?>',
+            confirmButtonText: 'Ok'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = '?pagina=login';
+            }
+        });
+    </script>-->
+                                   
                                 </div>
                             </div>
                         </div>
