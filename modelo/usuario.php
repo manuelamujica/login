@@ -8,7 +8,6 @@ class Usuario extends Conexion {
     private $usuario;
     private $clave;
     private $correo;
-    #perfil
     private $perfil;
 
     public function __construct(){
@@ -109,12 +108,9 @@ class Usuario extends Conexion {
 
     }
 
-
-
-
-
     #ACCESOS. 
     public function accesos($valor){
+        $datos = [];
         $sql= "SELECT p.cod_perfil FROM usuarios u
             INNER JOIN perfiles p ON u.cod_perfil = p.cod_perfil
             WHERE u.cod_usuario = :valor;";
@@ -125,7 +121,7 @@ class Usuario extends Conexion {
         if($resul){
             return $datos;
         }else{
-            return $res=[];
+            return [];
         }
     
     }
