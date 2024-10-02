@@ -3,7 +3,6 @@
 require_once 'modelo/usuario.php';
 
 $objUsuario = new Usuario();
-$objPerfiles = new Perfil();
 
 if(isset($_POST["ingresar"])){ 
 #verificar si lo que se esta enviando cumple con la validacion
@@ -24,20 +23,21 @@ if(isset($_POST["ingresar"])){
 			$_SESSION["iniciarsesion"] = "si";
 			$_SESSION["user"] = $respuesta["user"];
 			$_SESSION["nombre"] = $respuesta["nombre"];
-
+			
+			#Los accesos se inician en 0
 			$_SESSION["admin"]=0;
 			$_SESSION["usuario"]=0;
 			$_SESSION["invitado"]=0;
 
 			//Obtenemos los permisos asociados al usuario
-			//$accesos = $objUsuario->accesos($respuesta["cod_usuario"]);
+			$accesos = $objUsuario->accesos($respuesta["cod_usuario"]);
 			foreach($accesos as $cod_permiso){
 				if ($cod_permiso["cod_permiso"] == 1) {
-					$_SESSION["Admin"] = 1;
+					$_SESSION["admin"] = 1;
 				} else if ($cod_permiso["cod_permiso"] == 2) {
-					$_SESSION["Usuario"] = 1;
+					$_SESSION["usuario"] = 1;
 				} else if ($cod_permiso["cod_permiso"] == 3) {
-					$_SESSION["Invitado"] = 1;
+					$_SESSION["invitado"] = 1;
 				}
 			}
 		} else {
@@ -56,4 +56,5 @@ if(isset($_POST["ingresar"])){
 	}
 	
 }
+require_once 'vista/login.php';
 

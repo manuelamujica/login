@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<title>Clientes</title>
 <?php 
     include 'complemento/header.php';
     include "complemento/sidebar.php";

@@ -1,5 +1,5 @@
 <?php
-    $pagina = "inicio";
+    $pagina = "login";
     	if (!empty($_GET['pagina'])){ 
     	$pagina = $_GET['pagina'];  
     }
