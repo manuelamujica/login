@@ -45,7 +45,7 @@
             <span>Proveedor</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="usuario.php">
+        <a class="nav-link" href="?pagina=usuario">
         <i class="fas fa-users"></i>
             <span>Usuario</span></a>
     </li>

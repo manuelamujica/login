@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
+<title>Dashboard</title>
 <?php 
-    
-    include 'complemento/header.php';
-    include "complemento/sidebar.php";
+    include "vista/complemento/header.php";
+    include "vista/complemento/sidebar.php";
 ?>
 </head>
     
@@ -13,7 +13,7 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
             <div id="content">
-            <?php include "complemento/nav.php"; ?>
+            <?php include "vista/complemento/nav.php"; ?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -388,6 +388,6 @@
             </div>
         </div>
     </div>
-    <?php include "complemento/footer.php";?>
+    <?php include "vista/complemento/footer.php";?>
     
 

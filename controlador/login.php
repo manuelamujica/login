@@ -40,9 +40,7 @@ if(isset($_POST["ingresar"])){
 					$_SESSION["invitado"] = 1;
 				}
 			}
-				header('?pagina=inicio');
-				exit();
-				#require_once 'vista/inicio.php';
+			require_once 'vista/inicio.php';
 			}
 			
 		} else {
