@@ -45,8 +45,7 @@ if(isset($_POST["ingresar"])){
 		}else {
 			require_once 'vista/login.php';
 		}
->>>>>>> main
-			
+
 		} else {
 
 			require_once 'vista/login.php';

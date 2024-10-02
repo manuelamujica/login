@@ -4,12 +4,8 @@
 <head>
 <title>Dashboard</title>
 <?php 
-<<<<<<< HEAD
-    include "vista/complemento/header.php";
-=======
     
     include 'vista/complemento/header.php';
->>>>>>> main
     include "vista/complemento/sidebar.php";
 ?>
 </head>
