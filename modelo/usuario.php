@@ -89,7 +89,7 @@ class Usuario extends Conexion {
 
 #Para registrar un nuevo usuario desde la vista registrar usuario
     public function registrar($perfil){
-        $sql= "INSERT usuarios(nombre,apellido,user,clave,correo,cod_perfil) VALUES(:nombre,:apellido,:user,:clave,:correo,:cod_perfil)";
+        $sql= "INSERT INTO usuarios(nombre,apellido,user,clave,correo,cod_perfil) VALUES(:nombre,:apellido,:user,:clave,:correo,:cod_perfil)";
         $strExec = $this->conex->prepare($sql);
 
         $strExec->bindParam(':nombre',$this->nombre);
@@ -100,10 +100,13 @@ class Usuario extends Conexion {
         $strExec->bindParam(':cod_perfil',$perfil);
 
         $resul = $strExec->execute();
+
         if($resul){
             $r = 1;
+            return $r;
         } else{
             $r=0;
+            return $r;
         }
 
     }

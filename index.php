@@ -8,6 +8,6 @@
     	require_once("controlador/".$pagina.".php");
     }
     else{
-        require_once("controlador/error.php");
+        require_once("controlador/login.php");
     }
 ?>
