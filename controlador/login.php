@@ -23,7 +23,9 @@ if(isset($_POST["ingresar"])){
 			#$_SESSION["iniciarsesion"] = "si";
 			$_SESSION["user"] = $respuesta["user"];
 			$_SESSION["nombre"] = $respuesta["nombre"];
-			
+			$_SESSION["apellido"] = $respuesta["apellido"];
+			$_SESSION["correo"] = $respuesta["correo"];
+
 			#Los accesos se inician en 0
 			$_SESSION["admin"]=0;
 			$_SESSION["usuario"]=0;
@@ -40,28 +42,26 @@ if(isset($_POST["ingresar"])){
 					$_SESSION["invitado"] = 1;
 				}
 			}
-				
 				require_once 'vista/inicio.php';
 		}else {
+
+			echo "<script>
+                    alert('Error, intente nuevamente');
+                    window.location = '?pagina=login'
+                </script>";
 			require_once 'vista/login.php';
 		}
 
 		} else {
-
+			echo "<script>
+			alert('Usuario no encontrado');
+			window.location = '?pagina=login'
+				</script>";
 			require_once 'vista/login.php';
 		}
 	} else {
 
 		require_once 'vista/login.php';
-		/*"<script>
-                    alert('Error');
-                    window.location = '?pagina=login'
-                </script>";
-		$ingresar = [
-            'title'=>'Error',
-            'message'=>'Usuario no encontrado',
-            'icon'=>'error'
-        ];*/
 	}
 
 	

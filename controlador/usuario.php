@@ -22,11 +22,15 @@ if(isset($_POST['registrar'])){
     if($result == 1){
             echo "<script>
             alert('Registrado con exito');
-            location = 'usuarios' </script>";
+            location = '?pagina=usuario' 
+            </script>";
+            exit();
+            
     }else{
             echo "<script>
             alert('No se pudo completar el registro');
-            location = 'usuarios' </script>";
+            location = '?pagina=usuario' </script>";
+            exit();
         }
     }
 }
